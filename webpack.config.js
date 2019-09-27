@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const webpack = require("webpack");
@@ -15,7 +15,7 @@ module.exports = (env, options) => ({
   },
   devtool: "source-map",
   node: {
-    fs: 'empty'
+    fs: "empty"
   },
   module: {
     rules: [
@@ -32,13 +32,10 @@ module.exports = (env, options) => ({
               },
           "css-loader",
           {
-            loader: 'postcss-loader', 
+            loader: "postcss-loader",
             options: {
-              plugins: function () {
-                return [
-                  require('precss'),
-                  require('autoprefixer')
-                ];
+              plugins: function() {
+                return [require("precss"), require("autoprefixer")];
               }
             }
           },
@@ -62,7 +59,7 @@ module.exports = (env, options) => ({
         use: {
           loader: "html-srcsets-loader",
           options: {
-            attrs: [":src", ':srcset']
+            attrs: [":src", ":srcset"]
           }
         }
       },
@@ -72,7 +69,15 @@ module.exports = (env, options) => ({
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"]
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "usage",
+                  debug: true
+                }
+              ]
+            ]
           }
         }
       }
@@ -101,16 +106,16 @@ module.exports = (env, options) => ({
   ],
   optimization: {
     minimizer: [
-        new UglifyJsPlugin({
-            cache: true,
-            parallel: true,
-            sourceMap: false,
-            extractComments: false
-        }),
-        new CompressionPlugin({
-            test: /\.js$|\.css(\?.*)?$/i
-        }),
-        new OptimizeCSSAssetsPlugin({})
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false,
+        extractComments: false
+      }),
+      new CompressionPlugin({
+        test: /\.js$|\.css(\?.*)?$/i
+      }),
+      new OptimizeCSSAssetsPlugin({})
     ]
   },
   output: {
