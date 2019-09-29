@@ -3,6 +3,11 @@
 @import "fonts";
 @import "variables";
 
+//layouts
+@import "nav";
+@import "hero";
+
 body {
   background: #fff;
+  font-family: $font-family-montserrat;
 }

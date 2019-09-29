@@ -1,11 +1,173 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Hello World</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Hound News</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg p-5 navbar-light">
+          <a class="navbar-brand" href="#">The Hound News</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link " data-form="searchQuery" href="#"
+                  >Find your News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-form="searchSelect" href="#"
+                  >Find your topic</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="content">
+            <h1 class="title">Find your news<br />around the world</h1>
+            <div class="form">
+              <form class="form-inline searchQuery show">
+                <select class="custom-select" id="inlineFormCustomSelectPref">
+                  <option selected>Source</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inlineFormInputGroupUsername2"
+                    placeholder="Keyword"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.828"
+                    height="26.828"
+                    viewBox="0 0 26.828 26.828"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #fff;
+                          stroke-linecap: round;
+                          stroke-linejoin: round;
+                          stroke-width: 4px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="search" transform="translate(-1 -1)">
+                      <circle
+                        id="Elipse_1"
+                        cx="9.778"
+                        cy="9.778"
+                        r="9.778"
+                        class="cls-1"
+                        data-name="Elipse 1"
+                        transform="translate(3 3)"
+                      />
+                      <path
+                        id="Línea_2"
+                        d="M5.317 5.317L0 0"
+                        class="cls-1"
+                        data-name="Línea 2"
+                        transform="translate(19.683 19.683)"
+                      />
+                    </g>
+                  </svg>
+                  Search
+                </button>
+              </form>
+
+              <form class="form-inline searchSelect">
+                <select class="custom-select">
+                  <option selected>Country</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <select class="custom-select">
+                  <option selected>Category</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.828"
+                    height="26.828"
+                    viewBox="0 0 26.828 26.828"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #fff;
+                          stroke-linecap: round;
+                          stroke-linejoin: round;
+                          stroke-width: 4px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="search" transform="translate(-1 -1)">
+                      <circle
+                        id="Elipse_1"
+                        cx="9.778"
+                        cy="9.778"
+                        r="9.778"
+                        class="cls-1"
+                        data-name="Elipse 1"
+                        transform="translate(3 3)"
+                      />
+                      <path
+                        id="Línea_2"
+                        d="M5.317 5.317L0 0"
+                        class="cls-1"
+                        data-name="Línea 2"
+                        transform="translate(19.683 19.683)"
+                      />
+                    </g>
+                  </svg>
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
 </html>

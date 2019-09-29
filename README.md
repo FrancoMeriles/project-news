@@ -1,4 +1,4 @@
-# Project News
+# Project News - The Hound News
 
 This project is an example of how to use vanilla javascript to build an application that consumes a service, in this case i am using the [News Api](https://newsapi.org/) and i am also using this [Boilerplate](https://github.com/shaminmeerankutty/webpack-sass-bootstrap-boilerplate) where i am a contributor.
 
@@ -8,7 +8,7 @@ In this project i play arround a lot with:
 - Classes
 - Promises
 
-# Design
+## Design
 
 The UI/UX is made by [Sofía Colque](https://www.linkedin.com/in/sofiacolquesaavedra/), thanks a lot.
 
