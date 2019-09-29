@@ -8,6 +8,10 @@ In this project i play arround a lot with:
 - Classes
 - Promises
 
+# Design
+
+The UI/UX is made by [Sofía Colque](https://www.linkedin.com/in/sofiacolquesaavedra/), thanks a lot.
+
 ### Requirements
 
 - Please make sure you have NodeJS installed, as this contains `npm`, which is necessary
