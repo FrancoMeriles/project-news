@@ -31,7 +31,7 @@ Building files can be done as follows:
 
 Feel free to make a fork and send me a pull request with improvements, i am always willing to improve my way of writing code and thanks.
 
-## License (MIT)
+### License (MIT)
 
 Copyright 2019, Meriles Franco
 
