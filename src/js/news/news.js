@@ -17,7 +17,6 @@ class News {
 
   searchNews() {
     const url = `${api.baseURL}${this.target}?country=${this.country}&category=${this.category}`;
-    console.log(url);
     return this.makeRequest(url);
   }
 
@@ -28,7 +27,6 @@ class News {
 
   queryNews() {
     const url = `${api.baseURL}${this.target}?sources=${this.sources}&q=${this.q}`;
-    console.log(url);
     return this.makeRequest(url);
   }
 

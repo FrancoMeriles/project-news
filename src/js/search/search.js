@@ -1,13 +1,15 @@
 import News from "../news/news";
 import { createCard } from "../ui/card";
 import { fixBrokenImage } from "../utility/fixBrokenImage";
-import { spinnerNotFound } from "../ui/spinners";
+import { spinnerNotFound, spinner } from "../ui/spinners";
 
 const formSearchSelect = document.querySelector(".searchSelect");
 const formSearchQuery = document.querySelector(".searchQuery");
+const target = document.querySelector("#carousel-news");
 
 formSearchSelect.addEventListener("submit", e => {
   e.preventDefault();
+  target.innerHTML = spinner;
   const country = document.querySelector("#country").value;
   const category = document.querySelector("#category").value;
   const searchNews = new News({
@@ -19,9 +21,11 @@ formSearchSelect.addEventListener("submit", e => {
     .searchNews()
     .then(data => {
       const markup = createCard(data);
-      const target = document.querySelector("#carousel-news");
       target.innerHTML = markup;
       fixBrokenImage(".carousel-item__img");
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
     })
     .catch(error => {
       console.log(error);
@@ -30,6 +34,7 @@ formSearchSelect.addEventListener("submit", e => {
 
 formSearchQuery.addEventListener("submit", e => {
   e.preventDefault();
+  target.innerHTML = spinner;
   const sources = document.querySelector("#sources").value;
   const q = document.querySelector("#query").value;
   const querySearch = new News({
@@ -41,8 +46,6 @@ formSearchQuery.addEventListener("submit", e => {
   querySearch
     .queryNews()
     .then(data => {
-      console.log(data);
-      const target = document.querySelector("#carousel-news");
       if (data.articles.length === 0) {
         target.parentNode.classList.remove("hide");
         target.innerHTML = spinnerNotFound;
@@ -51,10 +54,10 @@ formSearchQuery.addEventListener("submit", e => {
         target.parentNode.classList.remove("hide");
         target.innerHTML = markup;
         fixBrokenImage(".carousel-item__img");
-        document.querySelector("body").scrollIntoView({
-          behavior: "smooth"
-        });
       }
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
     })
     .catch(error => {
       console.log(error);
