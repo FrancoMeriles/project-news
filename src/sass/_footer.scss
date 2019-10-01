@@ -1,0 +1,13 @@
+footer {
+  background-color: map-get($colors, n-gray);
+  margin-top: 40px;
+  p {
+    margin: 0px;
+    a {
+      color: map-get($colors, n-primary);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

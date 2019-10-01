@@ -1,0 +1,74 @@
+section.hero {
+  position: relative;
+  .container {
+    .content {
+      padding: 100px 0px 100px 0px;
+
+      .title {
+        font-size: 60px;
+        font-weight: bold;
+        color: map-get($colors, n-black);
+        line-height: 85px;
+      }
+
+      .form {
+        margin-top: 40px;
+        position: relative;
+        form {
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          height: 0;
+          transition: opacity 0.3s, visibility 0.3s;
+          select,
+          input {
+            color: #717a82;
+            height: 70px;
+            width: 200px;
+            border-radius: 0px;
+            border-color: transparent;
+            box-shadow: $shadow;
+          }
+
+          .custom-select {
+            border-right-color: map-get($colors, n-gray);
+          }
+
+          button {
+            height: 70px;
+            border-radius: 0px;
+            padding-left: 35px;
+            padding-right: 35px;
+            background-color: map-get($colors, n-primary);
+            box-shadow: $shadow;
+
+            svg {
+              width: 17px;
+              height: 20px;
+              margin-right: 8px;
+            }
+          }
+          &.show {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            transition: opacity 0.3s, visibility 0.3s;
+            transition-delay: 0.6s;
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 320px;
+    background-color: map-get($colors, n-gray);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: -1;
+  }
+}

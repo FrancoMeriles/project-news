@@ -3,6 +3,15 @@
 @import "fonts";
 @import "variables";
 
+//layouts
+@import "nav";
+@import "hero";
+@import "carrousel";
+@import "title";
+@import "spinner";
+@import "footer";
+
 body {
   background: #fff;
+  font-family: $font-family-montserrat;
 }

@@ -1,0 +1,35 @@
+header {
+  background-color: map-get($colors, n-white);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  nav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 16px;
+          position: relative;
+          color: map-get($colors, n-gray-text);
+        }
+
+        &.active {
+          .nav-link {
+            color: map-get($colors, n-black);
+            &::before {
+              content: "";
+              width: 80px;
+              height: 3px;
+              background-color: map-get($colors, n-primary);
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              right: 0;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
