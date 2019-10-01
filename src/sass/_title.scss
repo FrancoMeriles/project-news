@@ -1,0 +1,9 @@
+section.title {
+  h2 {
+    font-size: 28px;
+    font-weight: 500;
+    span {
+      color: map-get($colors, n-primary);
+    }
+  }
+}

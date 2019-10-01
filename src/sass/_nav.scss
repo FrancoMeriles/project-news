@@ -1,4 +1,8 @@
 header {
+  background-color: map-get($colors, n-white);
+  position: sticky;
+  top: 0;
+  z-index: 9;
   nav {
     .navbar-nav {
       .nav-item {
