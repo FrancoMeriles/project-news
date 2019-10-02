@@ -8,7 +8,10 @@
 
 .spinner {
   width: 100%;
-  text-align: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .spinner__ripple {
     display: inline-block;
     position: relative;

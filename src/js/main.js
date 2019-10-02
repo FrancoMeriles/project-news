@@ -14,7 +14,7 @@ userCountryData.then(response => {
     const news = new News();
     createNews(news);
   } else {
-    setText(response.country, "#title");
+    setText({ country: response.country }, "one");
     const countryName = response.countryCode.toLowerCase();
     const countryNews = new News({ country: countryName });
     const sourcesNews = new News({
