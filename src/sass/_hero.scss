@@ -1,5 +1,12 @@
 section.hero {
   position: relative;
+  overflow: hidden;
+  .line {
+    position: absolute;
+    right: -80px;
+    width: 250px;
+    top: -5px;
+  }
   .container {
     .content {
       padding: 100px 0px 100px 0px;
