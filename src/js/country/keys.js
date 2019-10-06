@@ -1,1 +1,1 @@
-export const apiUrlAdress = "https://extreme-ip-lookup.com/json/";
+export const apiUrlAdress = process.env.LOCATION_URL_API;
