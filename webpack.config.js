@@ -7,6 +7,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 const globSync = require("glob").sync;
+const Dotenv = require("dotenv-webpack");
 
 module.exports = (env, options) => ({
   entry: ["./src/index.js"],
@@ -95,6 +96,7 @@ module.exports = (env, options) => ({
         filename: fileName.replace("src/", "")
       });
     }),
+    new Dotenv(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
