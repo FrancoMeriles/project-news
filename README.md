@@ -8,6 +8,8 @@ In this project i play arround a lot with:
 - Classes
 - Promises
 
+[Live Preview](https://francomeriles.github.io/)
+
 ## Design
 
 The UI/UX is made by [Sofía Colque](https://www.linkedin.com/in/sofiacolquesaavedra/), thanks a lot.
