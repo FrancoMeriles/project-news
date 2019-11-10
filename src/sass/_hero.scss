@@ -6,10 +6,19 @@ section.hero {
     right: -80px;
     width: 250px;
     top: -5px;
+
+    @media (max-width: 768px) {
+      width: 124px;
+      right: -40px;
+    }
   }
   .container {
     .content {
       padding: 100px 0px 100px 0px;
+
+      @media (max-width: 768px) {
+        padding: 100px 0px 240px 0px;
+      }
 
       .title {
         font-size: 60px;
@@ -35,6 +44,11 @@ section.hero {
             border-radius: 0px;
             border-color: transparent;
             box-shadow: $shadow;
+
+            @media (max-width: 768px) {
+              width: 100%;
+              margin-bottom: 10px;
+            }
           }
 
           .custom-select {
@@ -48,7 +62,9 @@ section.hero {
             padding-right: 35px;
             background-color: map-get($colors, n-primary);
             box-shadow: $shadow;
-
+            @media (max-width: 768px) {
+              width: 100%;
+            }
             svg {
               width: 17px;
               height: 20px;

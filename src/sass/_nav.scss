@@ -6,6 +6,10 @@ header {
   nav {
     .navbar-nav {
       .nav-item {
+        @media (max-width: 768px) {
+          margin: 15px 0;
+        }
+
         .nav-link {
           font-size: 16px;
           position: relative;
@@ -15,6 +19,12 @@ header {
         &.active {
           .nav-link {
             color: map-get($colors, n-black);
+            @media (max-width: 768px) {
+              &::before {
+                right: auto !important;
+              }
+            }
+
             &::before {
               content: "";
               width: 80px;
