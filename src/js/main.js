@@ -3,12 +3,14 @@ import "./search/search";
 
 import News from "./news/news";
 import { userCountryData } from "./country/countryData";
-import { createCard } from "./ui/card";
+import { spinner } from "./ui/spinners";
+import { target } from "./ui/targets";
 import { setText } from "./utility/setText";
-import { fixBrokenImage } from "./utility/fixBrokenImage";
-import { makeSelectSources } from "./ui/selectSources";
+import { createNews } from "./news/createNews";
+import { createSources } from "./news/createSources";
 
 userCountryData.then(response => {
+  target.innerHTML = spinner;
   if (response.status === "fail") {
     console.warn(response.message);
     const news = new News();
@@ -22,26 +24,6 @@ userCountryData.then(response => {
       country: countryName
     });
     createNews(countryNews);
-    getSources(sourcesNews);
+    createSources(sourcesNews);
   }
 });
-
-const createNews = instanceNew => {
-  instanceNew
-    .latestNews()
-    .then(data => {
-      const markup = createCard(data);
-      const target = document.querySelector("#carousel-news");
-      target.innerHTML = markup;
-      fixBrokenImage(".carousel-item__img");
-    })
-    .catch(error => {
-      console.log(error);
-    });
-};
-
-const getSources = sourcesNewsInstance => {
-  sourcesNewsInstance.getSources().then(source => {
-    makeSelectSources(source);
-  });
-};
