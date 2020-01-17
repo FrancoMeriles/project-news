@@ -8,7 +8,7 @@ In this project i play arround a lot with:
 - Classes
 - Promises
 
-[Live Preview](https://francomeriles.github.io/)
+[Live Preview](https://dist.franmeriles.now.sh/)
 
 ## Design
 
