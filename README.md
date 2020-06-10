@@ -8,6 +8,7 @@ In this project i play arround a lot with:
 - Classes
 - Promises
 
+> **Update 2020:** The **NewsApi.org** changed its policies and now the free account can only consume the news api from localhost. To test this project do it locally
 [Live Preview](https://dist.franmeriles.now.sh/)
 
 ## Design
